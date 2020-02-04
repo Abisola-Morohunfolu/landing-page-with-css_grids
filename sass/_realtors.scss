@@ -9,11 +9,29 @@
 	justify-items: center;
 	align-content: center;
 
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: 1 / -1;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		padding: 2rem;
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: min-content max-content;
 		grid-gap: 5vh 2rem;
 		align-items: center;
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-template-columns: repeat(3, min-content max-content);
+			grid-gap: 0 3rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			grid-template-columns: min-content max-content;
+			grid-gap: 5vh 2rem;
+		}
 	}
 
 	&__img {
